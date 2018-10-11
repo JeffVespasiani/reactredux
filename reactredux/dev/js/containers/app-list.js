@@ -8,7 +8,7 @@ class AppList extends Component {
 	createAppList(){
 	return this.props.apps.map((app) => {
 			return (
-				<li key={app.id} onClick={() => this.props.selectApp(app)}>{app.feed.entry.entry['im:name'].label}</li>
+				<li key={app.id} onClick={() => this.props.selectApp(app)}>{app.first}</li>
 			)
 		});
 	}
