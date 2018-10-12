@@ -6,6 +6,7 @@ import {selectApp} from '../actions/index';
 class AppList extends Component {
 	
 	createAppList(){
+		console.log(this.props.apps)
 	return this.props.apps.map((app) => {
 			return (
 				<li key={app.id} onClick={() => this.props.selectApp(app)}>{app.first}</li>
