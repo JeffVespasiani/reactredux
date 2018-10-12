@@ -16,12 +16,12 @@ export const fetchAppsStart = () => ({
 	type: FETCH_APPS_START
 });
 
-export const fetchAppsSuccess = appNames => ({
+export const fetchAppsSuccess = (appNames) => ({
 	type: FETCH_APPS_SUCCESS,
 	apps: {appNames}
 });
 
-export const fetchAppsFail = error => ({
+export const fetchAppsFail = (error) => ({
 	type: FETCH_APPS_FAIL,
 	apps: {error}
 });
@@ -32,8 +32,8 @@ export function fetchApps() {
 		return fetch('http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json')
 		.then(response => response.json())
 		.then(json => {
-			dispatch(fetchAppsSuccess(json.feed.entry));
 			console.log(json);
+			dispatch(fetchAppsSuccess(json.feed.entry));
 			return json.feed.entry;
 		})
 		.catch(error => dispatch(fetchAppsFail(error)));
