@@ -19,6 +19,6 @@ export function loadJson(){
 export function getInfo(theInfo){
 	return{
 		type: "JSON_DATA",
-		info: theInfo
+		apps: theInfo
 	}
 }
