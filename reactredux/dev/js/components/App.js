@@ -1,7 +1,6 @@
 import React from 'react';
 import AppList from '../containers/app-list';
 import AppDetail from '../containers/app-detail'
-//import '../../css/style.css';
 
 const App = () => (
 	<div>
