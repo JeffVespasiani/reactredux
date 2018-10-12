@@ -1,7 +1,6 @@
 import React from 'react';
 import AppList from '../containers/app-list';
-import AppDetail from '../containers/app-detail';
-//require('../../scss/style.scss');
+import AppDetail from '../containers/app-detail'
 
 const App = () => (
 	<div>
