@@ -5,7 +5,7 @@ import {fetchApps} from '../actions/index';
 import {selectApp} from '../actions/index';
 
 class AppList extends Component {
-
+	
 	createAppList(){
 	//This collects the data from the API passed to the state to display in a list.
 	return this.props.apps.map((app) => {
@@ -17,6 +17,7 @@ class AppList extends Component {
 	
 	//The this.createAppList() in the render uses curly brackets to exit the JSX statement to call in the createAppList function to render the list of apps.
 	render() {
+		const {apps} = this.props;
 		return (
 			<ul>
 				{this.createAppList()}
