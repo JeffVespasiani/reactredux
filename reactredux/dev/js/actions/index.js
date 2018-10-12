@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//This sets the appropriate prop of the state to the app name picked when the user picks it.
 export const selectApp = (app) => {
 	return {
 		type: "APP_SELECTED",
