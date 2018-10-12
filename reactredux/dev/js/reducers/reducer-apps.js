@@ -5,23 +5,21 @@ export default function() {
 		{
 			id: 1,
 			first: "testone",
-			last: "testone",
+			second: "testone",
 			description: "Just put some stuff here",
 		},
 		{
 			id: 2,
 			first: "testtwo",
-			last: "testtwo",
+			second: "testtwo",
 			description: "Other stuff here",
 		},
 		{
 			id: 3,
 			first: "testthree",
-			last: "testthree",
+			second: "testthree",
 			description: "Stuff",
 		}
 	]
-	
-		
 	
 }
