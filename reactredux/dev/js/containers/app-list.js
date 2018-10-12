@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {fetchApps} from '../actions/index';
 import {selectApp} from '../actions/index';
 
 class AppList extends Component {
-	
+
 	createAppList(){
 	//This collects the data from the API passed to the state to display in a list.
 	return this.props.apps.map((app) => {
