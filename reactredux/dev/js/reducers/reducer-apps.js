@@ -1,7 +1,7 @@
-import * as Actions from '../actions/index';
+import {fetchApps} from '../actions/index';
+import {FETCH_APPS_START, FETCH_APPS_SUCCESS, FETCH_APPS_FAIL} from '../actions/index';
 
-export default function(state=null, action) {
-	
+export default function(action) {
 	//Placeholder data to test app functionality; will be removed when JSON call works
 	return [
 		{
