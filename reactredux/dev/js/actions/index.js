@@ -8,38 +8,38 @@ export const selectApp = (app) => {
 	}
 };
 
-export function somethingsWrong(){
-	return{
-		type: 'JSON_ERROR',
-	};
-}
+export const FETCH_APPS_START = 'FETCH_APPS_START';
+export const FETCH_APPS_SUCCESS = 'FETCH_APPS_SUCCESS';
+export const FETCH_APPS_FAIL = 'FETCH_APPS_FAIL';
 
-export function loadingJson(){
-	return{
-		type: 'JSON_LOADING',
-	};
-}
+export const fetchAppsStart = () => ({
+	type: FETCH_APPS_START
+});
 
-export function jsonSuccess(appInfo){
-	return{
-		type: 'JSON_FOUND',
-		appInfo
-	};
-}
-/*
-export function fetchJson(){
-	return (dispatch) => {
-		dispatch(loadingJson());
-		fetch('http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json')
-		.then((response)=>{
-			return response;
+export const fetchAppsSuccess = appNames => ({
+	type: FETCH_APPS_SUCCESS,
+	apps: {appNames}
+});
+
+export const fetchAppsFail = error => ({
+	type: FETCH_APPS_FAIL,
+	apps: {error}
+});
+
+export function fetchApps() {
+	return dispatch => {
+		dispatch(fetchAppsStart());
+		return fetch('http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json')
+		.then(response => response.json())
+		.then(json => {
+			dispatch(fetchAppsSuccess(json.feed.entry));
+			console.log(json);
+			return json.feed.entry;
 		})
-		.then((response) => response.json())
-		.then((appItems) => dispatch(jsonSuccess(appItems))
-		.catch(() => dispatch(somethingsWrong());
-	};
+		.catch(error => dispatch(fetchAppsFail(error)));
+	}
 }
-*/
+
 export function loadJson(){
 	return(dispatch)=>{
 		return axios.get("http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json").then((response)=>{
@@ -51,6 +51,6 @@ export function loadJson(){
 export function getInfo(theInfo){
 	return{
 		type: "JSON_DATA",
-		apps: theinfo
+		apps: theInfo
 	}
 };
