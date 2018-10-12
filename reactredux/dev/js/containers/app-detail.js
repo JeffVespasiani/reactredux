@@ -10,7 +10,8 @@ class AppDetail extends Component {
         }
         return (
             <div>
-				<h2>placeholder</h2>
+				<h2>{this.props.app.first} {this.props.app.second}</h2>
+				<p>{this.props.app.description}</p>
 			</div>
         );
     }
