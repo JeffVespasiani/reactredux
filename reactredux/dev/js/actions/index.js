@@ -11,6 +11,7 @@ export function loadJson(){
 	return(dispatch)=>{
 		return axios.get("http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json").then((response)=>{
 			dispatch(getInfo(response.data.feed.entry));
+			console.log(response);
 		})
 	}
 }
