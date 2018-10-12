@@ -9,7 +9,7 @@ class AppList extends Component {
 		console.log(this.props.apps)
 	return this.props.apps.map((app) => {
 			return (
-				<li><button className="menu" key={app.id} onClick={() => this.props.selectApp(app)}>{app.first}</button></li>
+				<li><button key={app.id} className="menu"  onClick={() => this.props.selectApp(app)}>{app.first}</button></li>
 			)
 		});
 	}
