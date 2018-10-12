@@ -1,5 +1,6 @@
+import * as Actions from '../actions/index';
 
-export default function() {
+export default function(state=null, action) {
 	
 	return [
 		{
