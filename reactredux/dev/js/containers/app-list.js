@@ -6,7 +6,7 @@ import {selectApp} from '../actions/index';
 class AppList extends Component {
 	
 	createAppList(){
-	
+	//This collects the data from the API passed to the state to display in a list.
 	return this.props.apps.map((app) => {
 			return (
 				<li><button key={app.id} className="menu"  onClick={() => this.props.selectApp(app)}>{app.first}</button></li>
