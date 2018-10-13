@@ -11,8 +11,8 @@ class AppDetail extends Component {
         }
         return (
             <div>
-				<h2>{this.props.app.first} {this.props.app.second}</h2>
-				<p>{this.props.app.description}</p>
+				<h2>{this.props.app['im:name'].label} </h2>
+				<p>{this.props.app.summary.label}</p>
 			</div>
         );
     }
