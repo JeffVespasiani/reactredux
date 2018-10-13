@@ -8,6 +8,10 @@ export default function(state=null, action) {
 			return action.apps;
 			break;
 	}
+	/*fetch('http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json')
+		.then(response => response.json())
+		.then((findresponse) => {this.setState({apps: findresponse.feed.entry})})*/
+	
 	
 	//Placeholder data to test app functionality; will be removed when JSON call works
 	return [
@@ -56,3 +60,4 @@ export default function(state=null, action) {
 	]
 	
 }
+
