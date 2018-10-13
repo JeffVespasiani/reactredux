@@ -8,7 +8,7 @@ class AppDetail extends Component {
 		
 		//If the user hasn't picked anything yet, this default value is shown.
         if (!this.props.app) {
-            return (<div>Select an app</div>);
+            return (<div><p className="centertext">Select an app</p></div>);
         }
         return (
             <div>
