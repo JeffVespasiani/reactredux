@@ -10,7 +10,7 @@ class AppList extends Component {
 	//This collects the data from the API passed to the state to display in a list.
 	return this.props.apps.map((app) => {
 			return (
-				<li><button key={app.id} className="menu"  onClick={() => this.props.selectApp(app)}>{app['im:name'].label}</button></li>
+				<li><button key={app.id} className="menu"  onClick={() => this.props.selectApp(app)}><img src={app['im:image'][0].label} /><br />{app['im:name'].label}</button></li>
 			)
 		});
 	}
