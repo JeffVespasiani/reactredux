@@ -6,6 +6,7 @@ import AppDetail from '../containers/app-detail'
 const App = () => (
 	<div>
 		<h2>App Name List</h2>
+		<p className="centertext">Select an app to learn more!</p>
 		<AppList />
 		<hr />
 		<h2>App Details</h2>
