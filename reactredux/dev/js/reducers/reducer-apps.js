@@ -7,30 +7,24 @@ export default function(state=null, action) {
 		case FETCH_APPS_SUCCESS:
 			return action.apps;
 			break;
-		case FETCH_APPS_FAIL:
-			return "error";
-			break;
 	}
 	
 	//Placeholder data to test app functionality; will be removed when JSON call works
 	return [
 		{
 			id: 1,
-			first: "testone",
-			second: "testone",
-			description: "Just put some stuff here",
+			"im:name":{label: "testone"},
+			"summary": {label: "Just put some stuff here"},
 		},
 		{
 			id: 2,
-			first: "testtwo",
-			second: "testtwo",
-			description: "Other stuff here",
+			"im:name":{label: "testtwo"},
+			"summary": {label: "Other stuff here"},
 		},
 		{
-			id: 3,
-			first: "testthree",
-			second: "testthree",
-			description: "Stuff",
+			"id": 3,
+			"im:name": {label: "testthree"},
+			"summary": {label: "Stuff"},
 		}
 	]
 	
