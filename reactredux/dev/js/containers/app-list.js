@@ -7,6 +7,7 @@ import {selectApp} from '../actions/index';
 class AppList extends Component {
 	
 	createAppList(){
+		console.log(this.props.apps);
 	//This collects the data from the API passed to the state to display in a list.
 	return this.props.apps.map((app) => {
 			return (
