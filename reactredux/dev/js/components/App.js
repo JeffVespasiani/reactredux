@@ -7,8 +7,8 @@ const App = () => (
 	<div>
 		<h2>App Name List</h2>
 		<p className="centertext">Select an app to learn more!</p>
-		<AppList />
 		<hr />
+		<AppList />
 		<h2>App Details</h2>
 		<AppDetail />
 	</div>
