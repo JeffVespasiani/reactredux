@@ -6,7 +6,6 @@ class AppDetail extends Component {
 	
     render() {
 		
-		//If the user hasn't picked anything yet, this default value is shown.
         if (!this.props.app) {
             return (<div><p className="centertext">Select an app</p></div>);
         }
@@ -25,7 +24,6 @@ class AppDetail extends Component {
     }
 }
 
-//This brings in the function in Actions that declares which app was picked by the user.
 function mapStateToProps(state) {
     return {
         app: state.active
