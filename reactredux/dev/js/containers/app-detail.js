@@ -7,10 +7,10 @@ class AppDetail extends Component {
     render() {
 		
         if (!this.props.app) {
-            return (<div><p className="centertext">Select an app</p></div>);
+            return (<div className="totheright"><p className="centertext">Select an app</p></div>);
         }
         return (
-            <div>
+            <div className="totheright">
 				<img src={this.props.app['im:image'][2].label} />
 				<h2>{this.props.app['im:name'].label} </h2>
 				<p>Release date: {moment(this.props.app['im:releaseDate'].label).format('MM/DD/YYYY')}</p>
