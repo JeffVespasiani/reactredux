@@ -16,9 +16,9 @@ export class AppList extends Component {
 		else if (appStuff.isGetting == false && appStuff.appsArr.length >= 1) {
 			return(
 				<div>
-				<ul>
+				<ul className="totheleft">
 				{appStuff.appsArr.map((app) => {
-					return (<li><button key={app.id} className="menu" onClick={() => this.props.selectApp(app)}><img src={app['im:image'][0].label} /><br />{app['im:name'].label}</button></li>
+					return (<li ><button key={app.id} className="menu" onClick={() => this.props.selectApp(app)}><img src={app['im:image'][0].label} /><br />{app['im:name'].label}</button></li>
 					)
 				})}
 				</ul>
